@@ -1,0 +1,42 @@
+[2023-07-26 19:16:59 +0000] [217075] [INFO] Starting gunicorn 20.1.0
+[2023-07-26 19:16:59 +0000] [217075] [INFO] Listening at: http://0.0.0.0:8080 (217075)
+[2023-07-26 19:16:59 +0000] [217075] [INFO] Using worker: sync
+[2023-07-26 19:16:59 +0000] [217076] [INFO] Booting worker with pid: 217076
+[2023-07-26 19:27:47 +0000] [217076] [INFO] Worker exiting (pid: 217076)
+[2023-07-26 19:27:47 +0000] [217075] [INFO] Handling signal: term
+[2023-07-26 19:27:47 +0000] [217075] [WARNING] Worker with pid 217076 was terminated due to signal 15
+[2023-07-26 19:27:47 +0000] [217075] [INFO] Shutting down: Master
+[2023-07-26 19:27:58 +0000] [217224] [INFO] Starting gunicorn 20.1.0
+[2023-07-26 19:27:58 +0000] [217224] [INFO] Listening at: http://0.0.0.0:8080 (217224)
+[2023-07-26 19:27:58 +0000] [217224] [INFO] Using worker: sync
+[2023-07-26 19:27:58 +0000] [217225] [INFO] Booting worker with pid: 217225
+[2023-07-26 19:33:07 +0000] [217225] [INFO] Worker exiting (pid: 217225)
+[2023-07-26 19:33:07 +0000] [217224] [INFO] Handling signal: term
+[2023-07-26 19:33:07 +0000] [217224] [WARNING] Worker with pid 217225 was terminated due to signal 15
+[2023-07-26 19:33:07 +0000] [217224] [INFO] Shutting down: Master
+[2023-07-26 19:33:11 +0000] [217267] [INFO] Starting gunicorn 20.1.0
+[2023-07-26 19:33:11 +0000] [217267] [INFO] Listening at: http://0.0.0.0:8080 (217267)
+[2023-07-26 19:33:11 +0000] [217267] [INFO] Using worker: sync
+[2023-07-26 19:33:11 +0000] [217268] [INFO] Booting worker with pid: 217268
+[2023-07-26 19:38:45 +0000] [217267] [INFO] Handling signal: term
+[2023-07-26 19:38:45 +0000] [217268] [INFO] Worker exiting (pid: 217268)
+[2023-07-26 19:38:45 +0000] [217267] [INFO] Shutting down: Master
+[2023-07-26 19:38:48 +0000] [217319] [INFO] Starting gunicorn 20.1.0
+[2023-07-26 19:38:48 +0000] [217319] [INFO] Listening at: http://0.0.0.0:8080 (217319)
+[2023-07-26 19:38:48 +0000] [217319] [INFO] Using worker: sync
+[2023-07-26 19:38:48 +0000] [217320] [INFO] Booting worker with pid: 217320
+[2023-07-26 19:42:46 +0000] [217320] [INFO] Worker exiting (pid: 217320)
+[2023-07-26 19:42:46 +0000] [217319] [INFO] Handling signal: term
+[2023-07-26 19:42:46 +0000] [217319] [WARNING] Worker with pid 217320 was terminated due to signal 15
+[2023-07-26 19:42:46 +0000] [217319] [INFO] Shutting down: Master
+[2023-07-26 19:42:49 +0000] [217352] [INFO] Starting gunicorn 20.1.0
+[2023-07-26 19:42:49 +0000] [217352] [INFO] Listening at: http://0.0.0.0:8080 (217352)
+[2023-07-26 19:42:49 +0000] [217352] [INFO] Using worker: sync
+[2023-07-26 19:42:49 +0000] [217353] [INFO] Booting worker with pid: 217353
+[2023-07-26 19:46:21 +0000] [217353] [INFO] Worker exiting (pid: 217353)
+[2023-07-26 19:46:21 +0000] [217352] [INFO] Handling signal: term
+[2023-07-26 19:46:21 +0000] [217352] [INFO] Shutting down: Master
+[2023-07-26 19:46:24 +0000] [217380] [INFO] Starting gunicorn 20.1.0
+[2023-07-26 19:46:24 +0000] [217380] [INFO] Listening at: http://0.0.0.0:8080 (217380)
+[2023-07-26 19:46:24 +0000] [217380] [INFO] Using worker: sync
+[2023-07-26 19:46:24 +0000] [217381] [INFO] Booting worker with pid: 217381
