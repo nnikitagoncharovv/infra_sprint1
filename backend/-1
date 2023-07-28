@@ -40,3 +40,629 @@
 [2023-07-26 19:46:24 +0000] [217380] [INFO] Listening at: http://0.0.0.0:8080 (217380)
 [2023-07-26 19:46:24 +0000] [217380] [INFO] Using worker: sync
 [2023-07-26 19:46:24 +0000] [217381] [INFO] Booting worker with pid: 217381
+[2023-07-28 07:53:14 +0000] [217381] [INFO] Worker exiting (pid: 217381)
+[2023-07-28 07:53:14 +0000] [217380] [INFO] Handling signal: term
+[2023-07-28 07:53:14 +0000] [217380] [INFO] Shutting down: Master
+[2023-07-28 07:53:22 +0000] [246618] [INFO] Starting gunicorn 20.1.0
+[2023-07-28 07:53:22 +0000] [246618] [INFO] Listening at: http://0.0.0.0:8080 (246618)
+[2023-07-28 07:53:22 +0000] [246618] [INFO] Using worker: sync
+[2023-07-28 07:53:22 +0000] [246619] [INFO] Booting worker with pid: 246619
+[2023-07-28 07:53:27 +0000] [246619] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/yc-user/infra_sprint1/backend/kittygram_backend/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/__init__.py", line 19, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 82, in __getattr__
+    self._setup(name)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 69, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 170, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/yc-user/infra_sprint1/backend/kittygram_backend/settings.py", line 13
+    DEBUG = os.getenv('DEBUG'== True, False)))
+                                            ^
+SyntaxError: unmatched ')'
+[2023-07-28 07:53:27 +0000] [246619] [INFO] Worker exiting (pid: 246619)
+[2023-07-28 07:53:27 +0000] [246618] [INFO] Shutting down: Master
+[2023-07-28 07:53:27 +0000] [246618] [INFO] Reason: Worker failed to boot.
+[2023-07-28 07:54:33 +0000] [246644] [INFO] Starting gunicorn 20.1.0
+[2023-07-28 07:54:33 +0000] [246644] [INFO] Listening at: http://0.0.0.0:8080 (246644)
+[2023-07-28 07:54:33 +0000] [246644] [INFO] Using worker: sync
+[2023-07-28 07:54:33 +0000] [246645] [INFO] Booting worker with pid: 246645
+[2023-07-28 07:54:33 +0000] [246645] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/yc-user/infra_sprint1/backend/kittygram_backend/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/__init__.py", line 19, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 82, in __getattr__
+    self._setup(name)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 69, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 170, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/yc-user/infra_sprint1/backend/kittygram_backend/settings.py", line 13
+    DEBUG = os.getenv('DEBUG'== True, False)))
+                                            ^
+SyntaxError: unmatched ')'
+[2023-07-28 07:54:33 +0000] [246645] [INFO] Worker exiting (pid: 246645)
+[2023-07-28 07:54:33 +0000] [246644] [INFO] Shutting down: Master
+[2023-07-28 07:54:33 +0000] [246644] [INFO] Reason: Worker failed to boot.
+[2023-07-28 07:55:13 +0000] [246658] [INFO] Starting gunicorn 20.1.0
+[2023-07-28 07:55:13 +0000] [246658] [INFO] Listening at: http://0.0.0.0:8080 (246658)
+[2023-07-28 07:55:13 +0000] [246658] [INFO] Using worker: sync
+[2023-07-28 07:55:13 +0000] [246659] [INFO] Booting worker with pid: 246659
+[2023-07-28 07:55:13 +0000] [246659] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/yc-user/infra_sprint1/backend/kittygram_backend/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/__init__.py", line 19, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 82, in __getattr__
+    self._setup(name)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 69, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 170, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/yc-user/infra_sprint1/backend/kittygram_backend/settings.py", line 13
+    DEBUG = os.getenv('DEBUG'== True, False)))
+                                            ^
+SyntaxError: unmatched ')'
+[2023-07-28 07:55:13 +0000] [246659] [INFO] Worker exiting (pid: 246659)
+[2023-07-28 07:55:13 +0000] [246658] [INFO] Shutting down: Master
+[2023-07-28 07:55:13 +0000] [246658] [INFO] Reason: Worker failed to boot.
+[2023-07-28 07:56:37 +0000] [246680] [INFO] Starting gunicorn 20.1.0
+[2023-07-28 07:56:37 +0000] [246680] [INFO] Listening at: http://0.0.0.0:8080 (246680)
+[2023-07-28 07:56:37 +0000] [246680] [INFO] Using worker: sync
+[2023-07-28 07:56:37 +0000] [246681] [INFO] Booting worker with pid: 246681
+[2023-07-28 07:56:37 +0000] [246681] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/yc-user/infra_sprint1/backend/kittygram_backend/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/__init__.py", line 19, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 82, in __getattr__
+    self._setup(name)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 69, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 170, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/yc-user/infra_sprint1/backend/kittygram_backend/settings.py", line 13, in <module>
+    DEBUG = os.getenv('DEBUG'== True, False)
+  File "/usr/lib/python3.10/os.py", line 775, in getenv
+    return environ.get(key, default)
+  File "/usr/lib/python3.10/_collections_abc.py", line 819, in get
+    return self[key]
+  File "/usr/lib/python3.10/os.py", line 676, in __getitem__
+    value = self._data[self.encodekey(key)]
+  File "/usr/lib/python3.10/os.py", line 756, in encode
+    raise TypeError("str expected, not %s" % type(value).__name__)
+TypeError: str expected, not bool
+[2023-07-28 07:56:37 +0000] [246681] [INFO] Worker exiting (pid: 246681)
+[2023-07-28 07:56:37 +0000] [246680] [INFO] Shutting down: Master
+[2023-07-28 07:56:37 +0000] [246680] [INFO] Reason: Worker failed to boot.
+[2023-07-28 07:57:59 +0000] [246703] [INFO] Starting gunicorn 20.1.0
+[2023-07-28 07:57:59 +0000] [246703] [INFO] Listening at: http://0.0.0.0:8080 (246703)
+[2023-07-28 07:57:59 +0000] [246703] [INFO] Using worker: sync
+[2023-07-28 07:57:59 +0000] [246704] [INFO] Booting worker with pid: 246704
+[2023-07-28 07:57:59 +0000] [246704] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/yc-user/infra_sprint1/backend/kittygram_backend/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/__init__.py", line 19, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 82, in __getattr__
+    self._setup(name)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 69, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 170, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/yc-user/infra_sprint1/backend/kittygram_backend/settings.py", line 13, in <module>
+    DEBUG = os.getenv('DEBUG'== 'TRUE', False)
+  File "/usr/lib/python3.10/os.py", line 775, in getenv
+    return environ.get(key, default)
+  File "/usr/lib/python3.10/_collections_abc.py", line 819, in get
+    return self[key]
+  File "/usr/lib/python3.10/os.py", line 676, in __getitem__
+    value = self._data[self.encodekey(key)]
+  File "/usr/lib/python3.10/os.py", line 756, in encode
+    raise TypeError("str expected, not %s" % type(value).__name__)
+TypeError: str expected, not bool
+[2023-07-28 07:57:59 +0000] [246704] [INFO] Worker exiting (pid: 246704)
+[2023-07-28 07:57:59 +0000] [246703] [INFO] Shutting down: Master
+[2023-07-28 07:57:59 +0000] [246703] [INFO] Reason: Worker failed to boot.
+[2023-07-28 08:05:54 +0000] [246770] [INFO] Starting gunicorn 20.1.0
+[2023-07-28 08:05:54 +0000] [246770] [INFO] Listening at: http://0.0.0.0:8080 (246770)
+[2023-07-28 08:05:54 +0000] [246770] [INFO] Using worker: sync
+[2023-07-28 08:05:54 +0000] [246771] [INFO] Booting worker with pid: 246771
+[2023-07-28 08:05:54 +0000] [246771] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/yc-user/infra_sprint1/backend/kittygram_backend/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/__init__.py", line 19, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 82, in __getattr__
+    self._setup(name)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 69, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 170, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/yc-user/infra_sprint1/backend/kittygram_backend/settings.py", line 13, in <module>
+    DEBUG = os.getenv('DEBUG'=='TRUE', False)
+  File "/usr/lib/python3.10/os.py", line 775, in getenv
+    return environ.get(key, default)
+  File "/usr/lib/python3.10/_collections_abc.py", line 819, in get
+    return self[key]
+  File "/usr/lib/python3.10/os.py", line 676, in __getitem__
+    value = self._data[self.encodekey(key)]
+  File "/usr/lib/python3.10/os.py", line 756, in encode
+    raise TypeError("str expected, not %s" % type(value).__name__)
+TypeError: str expected, not bool
+[2023-07-28 08:05:54 +0000] [246771] [INFO] Worker exiting (pid: 246771)
+[2023-07-28 08:05:54 +0000] [246770] [INFO] Shutting down: Master
+[2023-07-28 08:05:54 +0000] [246770] [INFO] Reason: Worker failed to boot.
+[2023-07-28 09:47:53 +0000] [247481] [INFO] Starting gunicorn 20.1.0
+[2023-07-28 09:47:53 +0000] [247481] [INFO] Listening at: http://0.0.0.0:8080 (247481)
+[2023-07-28 09:47:53 +0000] [247481] [INFO] Using worker: sync
+[2023-07-28 09:47:53 +0000] [247482] [INFO] Booting worker with pid: 247482
+[2023-07-28 09:47:54 +0000] [247482] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/yc-user/infra_sprint1/backend/kittygram_backend/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/__init__.py", line 19, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 82, in __getattr__
+    self._setup(name)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 69, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 170, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/yc-user/infra_sprint1/backend/kittygram_backend/settings.py", line 13, in <module>
+    DEBUG = os.getenv('DEBUG'=='True', False)
+  File "/usr/lib/python3.10/os.py", line 775, in getenv
+    return environ.get(key, default)
+  File "/usr/lib/python3.10/_collections_abc.py", line 819, in get
+    return self[key]
+  File "/usr/lib/python3.10/os.py", line 676, in __getitem__
+    value = self._data[self.encodekey(key)]
+  File "/usr/lib/python3.10/os.py", line 756, in encode
+    raise TypeError("str expected, not %s" % type(value).__name__)
+TypeError: str expected, not bool
+[2023-07-28 09:47:54 +0000] [247482] [INFO] Worker exiting (pid: 247482)
+[2023-07-28 09:47:54 +0000] [247481] [INFO] Shutting down: Master
+[2023-07-28 09:47:54 +0000] [247481] [INFO] Reason: Worker failed to boot.
+[2023-07-28 10:13:56 +0000] [247773] [INFO] Starting gunicorn 20.1.0
+[2023-07-28 10:13:56 +0000] [247773] [INFO] Listening at: http://0.0.0.0:8080 (247773)
+[2023-07-28 10:13:56 +0000] [247773] [INFO] Using worker: sync
+[2023-07-28 10:13:56 +0000] [247774] [INFO] Booting worker with pid: 247774
+[2023-07-28 10:13:56 +0000] [247774] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/yc-user/infra_sprint1/backend/kittygram_backend/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/__init__.py", line 19, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 82, in __getattr__
+    self._setup(name)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 69, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 170, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/yc-user/infra_sprint1/backend/kittygram_backend/settings.py", line 13, in <module>
+    DEBUG = os.getenv('DEBUG'=='True', False)
+  File "/usr/lib/python3.10/os.py", line 775, in getenv
+    return environ.get(key, default)
+  File "/usr/lib/python3.10/_collections_abc.py", line 819, in get
+    return self[key]
+  File "/usr/lib/python3.10/os.py", line 676, in __getitem__
+    value = self._data[self.encodekey(key)]
+  File "/usr/lib/python3.10/os.py", line 756, in encode
+    raise TypeError("str expected, not %s" % type(value).__name__)
+TypeError: str expected, not bool
+[2023-07-28 10:13:56 +0000] [247774] [INFO] Worker exiting (pid: 247774)
+[2023-07-28 10:13:56 +0000] [247773] [INFO] Shutting down: Master
+[2023-07-28 10:13:56 +0000] [247773] [INFO] Reason: Worker failed to boot.
+[2023-07-28 10:17:34 +0000] [247824] [INFO] Starting gunicorn 20.1.0
+[2023-07-28 10:17:34 +0000] [247824] [INFO] Listening at: http://0.0.0.0:8080 (247824)
+[2023-07-28 10:17:34 +0000] [247824] [INFO] Using worker: sync
+[2023-07-28 10:17:34 +0000] [247825] [INFO] Booting worker with pid: 247825
+[2023-07-28 10:17:34 +0000] [247825] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/yc-user/infra_sprint1/backend/kittygram_backend/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/__init__.py", line 19, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 82, in __getattr__
+    self._setup(name)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 69, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 170, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/yc-user/infra_sprint1/backend/kittygram_backend/settings.py", line 13, in <module>
+    DEBUG = os.getenv(bool('DEBUG'=='True'), False)
+  File "/usr/lib/python3.10/os.py", line 775, in getenv
+    return environ.get(key, default)
+  File "/usr/lib/python3.10/_collections_abc.py", line 819, in get
+    return self[key]
+  File "/usr/lib/python3.10/os.py", line 676, in __getitem__
+    value = self._data[self.encodekey(key)]
+  File "/usr/lib/python3.10/os.py", line 756, in encode
+    raise TypeError("str expected, not %s" % type(value).__name__)
+TypeError: str expected, not bool
+[2023-07-28 10:17:35 +0000] [247825] [INFO] Worker exiting (pid: 247825)
+[2023-07-28 10:17:35 +0000] [247824] [INFO] Shutting down: Master
+[2023-07-28 10:17:35 +0000] [247824] [INFO] Reason: Worker failed to boot.
+[2023-07-28 10:50:28 +0000] [248123] [INFO] Starting gunicorn 20.1.0
+[2023-07-28 10:50:28 +0000] [248123] [INFO] Listening at: http://0.0.0.0:8080 (248123)
+[2023-07-28 10:50:28 +0000] [248123] [INFO] Using worker: sync
+[2023-07-28 10:50:28 +0000] [248124] [INFO] Booting worker with pid: 248124
+[2023-07-28 10:50:28 +0000] [248124] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/yc-user/infra_sprint1/backend/kittygram_backend/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/__init__.py", line 19, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 82, in __getattr__
+    self._setup(name)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 69, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/yc-user/infra_sprint1/backend/venv/lib/python3.10/site-packages/django/conf/__init__.py", line 170, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/yc-user/infra_sprint1/backend/kittygram_backend/settings.py", line 13, in <module>
+    DEBUG = bool(strtobool(os.getenv('DEBUG', 'False')))
+NameError: name 'strtobool' is not defined
+[2023-07-28 10:50:28 +0000] [248124] [INFO] Worker exiting (pid: 248124)
+[2023-07-28 10:50:28 +0000] [248123] [INFO] Shutting down: Master
+[2023-07-28 10:50:28 +0000] [248123] [INFO] Reason: Worker failed to boot.
+[2023-07-28 10:51:42 +0000] [248140] [INFO] Starting gunicorn 20.1.0
+[2023-07-28 10:51:42 +0000] [248140] [INFO] Listening at: http://0.0.0.0:8080 (248140)
+[2023-07-28 10:51:42 +0000] [248140] [INFO] Using worker: sync
+[2023-07-28 10:51:42 +0000] [248141] [INFO] Booting worker with pid: 248141
+[2023-07-28 10:56:45 +0000] [248140] [INFO] Handling signal: term
+[2023-07-28 10:56:45 +0000] [248141] [INFO] Worker exiting (pid: 248141)
+[2023-07-28 10:56:45 +0000] [248140] [INFO] Shutting down: Master
+[2023-07-28 10:56:48 +0000] [248207] [INFO] Starting gunicorn 20.1.0
+[2023-07-28 10:56:48 +0000] [248207] [INFO] Listening at: http://0.0.0.0:8080 (248207)
+[2023-07-28 10:56:48 +0000] [248207] [INFO] Using worker: sync
+[2023-07-28 10:56:48 +0000] [248208] [INFO] Booting worker with pid: 248208
+[2023-07-28 10:58:58 +0000] [248208] [INFO] Worker exiting (pid: 248208)
+[2023-07-28 10:58:58 +0000] [248207] [INFO] Handling signal: term
+[2023-07-28 10:58:58 +0000] [248207] [WARNING] Worker with pid 248208 was terminated due to signal 15
+[2023-07-28 10:58:58 +0000] [248207] [INFO] Shutting down: Master
+[2023-07-28 10:59:02 +0000] [248245] [INFO] Starting gunicorn 20.1.0
+[2023-07-28 10:59:02 +0000] [248245] [INFO] Listening at: http://0.0.0.0:8080 (248245)
+[2023-07-28 10:59:02 +0000] [248245] [INFO] Using worker: sync
+[2023-07-28 10:59:02 +0000] [248246] [INFO] Booting worker with pid: 248246
+[2023-07-28 11:00:23 +0000] [248245] [INFO] Handling signal: term
+[2023-07-28 11:00:23 +0000] [248246] [INFO] Worker exiting (pid: 248246)
+[2023-07-28 11:00:23 +0000] [248245] [INFO] Shutting down: Master
+[2023-07-28 11:00:26 +0000] [248266] [INFO] Starting gunicorn 20.1.0
+[2023-07-28 11:00:26 +0000] [248266] [INFO] Listening at: http://0.0.0.0:8080 (248266)
+[2023-07-28 11:00:26 +0000] [248266] [INFO] Using worker: sync
+[2023-07-28 11:00:26 +0000] [248267] [INFO] Booting worker with pid: 248267
